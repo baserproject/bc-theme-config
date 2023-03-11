@@ -8,12 +8,11 @@
  * @since         5.0.0
  * @license       https://basercms.net/license/index.html MIT License
  */
+namespace BcThemeConfig\Test\Fixture\Factory;
 
-return [
-    'type' => 'CorePlugin',
-    'title' => __d('baser_core', 'テーマ設定'),
-    'description' => __d('baser_core', 'テーマ拡張の設定機能'),
-    'author' => 'baserCMS User Community',
-    'url' => 'https://basercms.net',
-    'installMessage' => ''
-];
+use Cake\TestSuite\Fixture\TestFixture;
+
+/**
+ * SearchIndexFixture
+ */
+class ThemeConfigsFixture extends TestFixture {}
