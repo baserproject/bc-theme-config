@@ -9,13 +9,13 @@
  * @license       https://basercms.net/license/index.html MIT License
  */
 
-namespace BcThemeConfig\Test\TestCase\Controller\Api;
+namespace BcThemeConfig\Test\TestCase\Controller\Api\Admin;
 
 use BaserCore\Test\Scenario\InitAppScenario;
 use BaserCore\TestSuite\BcTestCase;
 use BcThemeConfig\Test\Scenario\ThemeConfigsScenario;
-use CakephpFixtureFactories\Scenario\ScenarioAwareTrait;
 use Cake\TestSuite\IntegrationTestTrait;
+use CakephpFixtureFactories\Scenario\ScenarioAwareTrait;
 
 /**
  * Class ThemeConfigsControllerTest
@@ -85,7 +85,7 @@ class ThemeConfigsControllerTest extends BcTestCase
         //データを生成
         $this->loadFixtureScenario(ThemeConfigsScenario::class);
         //APIをコル
-        $this->get('/baser/api/bc-theme-config/theme_configs/view.json?token=' . $this->accessToken);
+        $this->get('/baser/api/admin/bc-theme-config/theme_configs/view.json?token=' . $this->accessToken);
         //ステータスを確認
         $this->assertResponseOk();
         //戻る値を確認
@@ -106,7 +106,7 @@ class ThemeConfigsControllerTest extends BcTestCase
             'name_add' => 'value_edit'
         ];
         //APIを呼ぶ
-        $this->post("/baser/api/bc-theme-config/theme_configs/edit.json?token=" . $this->accessToken, $data);
+        $this->post("/baser/api/admin/bc-theme-config/theme_configs/edit.json?token=" . $this->accessToken, $data);
         //ステータスを確認
         $this->assertResponseSuccess();
         //戻る値を確認
@@ -119,7 +119,7 @@ class ThemeConfigsControllerTest extends BcTestCase
             'test'
         ];
         //APIを呼ぶ
-        $this->post("/baser/api/bc-theme-config/theme_configs/edit.json?token=" . $this->accessToken, $data);
+        $this->post("/baser/api/admin/bc-theme-config/theme_configs/edit.json?token=" . $this->accessToken, $data);
         //ステータスを確認
         $this->assertResponseCode(500);
         //戻る値を確認

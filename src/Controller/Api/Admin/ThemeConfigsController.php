@@ -9,11 +9,10 @@
  * @license       https://basercms.net/license/index.html MIT License
  */
 
-namespace BcThemeConfig\Controller\Api;
+namespace BcThemeConfig\Controller\Api\Admin;
 
-use BaserCore\Controller\Api\BcApiController;
+use BaserCore\Controller\Api\Admin\BcAdminApiController;
 use BcThemeConfig\Service\ThemeConfigsServiceInterface;
-use Cake\Datasource\Exception\RecordNotFoundException;
 use Cake\ORM\Exception\PersistenceFailedException;
 use BaserCore\Annotation\UnitTest;
 use BaserCore\Annotation\NoTodo;
@@ -24,7 +23,7 @@ use BaserCore\Annotation\Checked;
  *
  * [API] テーマ設定コントローラー
  */
-class ThemeConfigsController extends BcApiController
+class ThemeConfigsController extends BcAdminApiController
 {
 
     /**
