@@ -18,7 +18,7 @@ use BcThemeConfig\Model\Table\ThemeConfigsTable;
  * Class BcThemeConfigTest
  * @property ThemeConfigsTable $ThemeConfigsTable
  */
-class ThemeConfigTableTest extends BcTestCase
+class ThemeConfigTest extends BcTestCase
 {
 
     /**

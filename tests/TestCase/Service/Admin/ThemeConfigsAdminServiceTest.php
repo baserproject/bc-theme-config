@@ -9,27 +9,30 @@
  * @license       https://basercms.net/license/index.html MIT License
  */
 
-namespace BcThemeConfig\Model\Entity;
+namespace BcThemeConfig\Test\TestCase\Service\Admin;
 
-use Cake\ORM\Entity as EntityAlias;
-use BaserCore\Annotation\UnitTest;
-use BaserCore\Annotation\NoTodo;
-use BaserCore\Annotation\Checked;
+use BaserCore\TestSuite\BcTestCase;
 
 /**
- * Class ThemeConfig
+ * ThemeConfigsSAdminerviceTest
  */
-class ThemeConfig extends EntityAlias
+class ThemeConfigsAdminServiceTest extends BcTestCase
 {
 
     /**
-     * Accessible
-     *
-     * @var array
+     * set up
      */
-    protected $_accessible = [
-        '*' => true,
-        'id' => false
-    ];
+    public function setUp(): void
+    {
+        parent::setUp();
+    }
+
+    /**
+     * tear down
+     */
+    public function tearDown(): void
+    {
+        parent::tearDown();
+    }
 
 }
