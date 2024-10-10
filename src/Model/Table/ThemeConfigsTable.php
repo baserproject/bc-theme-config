@@ -34,7 +34,6 @@ class ThemeConfigsTable extends AppTable
      * @return void
      * @checked
      * @noTodo
-     * @unitTest
      */
     public function initialize(array $config): void
     {
@@ -49,7 +48,6 @@ class ThemeConfigsTable extends AppTable
      * @return Validator
      * @checked
      * @noTodo
-     * @unitTest
      */
     public function validationDefault(Validator $validator): Validator
     {
