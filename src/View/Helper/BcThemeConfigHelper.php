@@ -15,9 +15,6 @@ use BaserCore\Utility\BcUtil;
 use Cake\Core\Plugin;
 use Cake\ORM\TableRegistry;
 use Cake\View\Helper;
-use BaserCore\Annotation\UnitTest;
-use BaserCore\Annotation\NoTodo;
-use BaserCore\Annotation\Checked;
 
 /**
  * BcThemeConfigHelper
@@ -44,8 +41,6 @@ class BcThemeConfigHelper extends Helper
      *    - `class` : all を true とした場合、UL タグの class 属性を指定できる。
      *    ※ その他の、パラメーターは、 BcBaserHelper->getThemeImage() を参照
      * @return void
-     * @checked
-     * @noTodo
      */
     public function mainImage($options = [])
     {
@@ -89,8 +84,6 @@ class BcThemeConfigHelper extends Helper
      * @param array $options オプション（初期値 : array()）
      *    ※ パラメーターは、 BcBaserHelper->getThemeImage() を参照
      * @return void
-     * @checked
-     * @noTodo
      */
     public function logo($options = [])
     {
@@ -115,8 +108,6 @@ class BcThemeConfigHelper extends Helper
      *    - `noimage:
      *    - `output:
      * @return string $tag テーマ画像のHTMLタグ
-     * @checked
-     * @noTodo
      */
     public function getThemeImage($name, $options = [])
     {
