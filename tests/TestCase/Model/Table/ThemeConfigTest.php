@@ -27,6 +27,15 @@ class ThemeConfigTest extends BcTestCase
     public $ThemeConfigsTable;
 
     /**
+     * Fixtures
+     *
+     * @var array
+     */
+    protected $fixtures = [
+        'plugin.BcThemeConfig.Factory/ThemeConfigs',
+    ];
+
+    /**
      * Set Up
      *
      * @return void
