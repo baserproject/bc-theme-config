@@ -18,7 +18,6 @@ use BaserCore\Error\BcException;
 use BaserCore\Utility\BcUtil;
 use BaserCore\Vendor\Imageresizer;
 use BcThemeConfig\Model\Entity\ThemeConfig;
-use BcThemeConfig\Model\Table\ThemeConfigsTable;
 use Cake\Core\Plugin;
 use Cake\Datasource\EntityInterface;
 use Cake\Filesystem\File;
@@ -37,12 +36,6 @@ class ThemeConfigsService implements ThemeConfigsServiceInterface
      * @var ThemeConfig
      */
     protected $entity;
-
-    /**
-     * ThemeConfigs Table
-     * @var ThemeConfigsTable|\Cake\ORM\Table
-     */
-    public ThemeConfigsTable|\Cake\ORM\Table $ThemeConfigs;
 
     /**
      * constructor.
