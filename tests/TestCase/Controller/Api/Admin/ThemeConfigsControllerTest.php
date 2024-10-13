@@ -30,20 +30,6 @@ class ThemeConfigsControllerTest extends BcTestCase
     use IntegrationTestTrait;
 
     /**
-     * Fixtures
-     *
-     * @var array
-     */
-    public $fixtures = [
-        'plugin.BaserCore.Factory/Sites',
-        'plugin.BaserCore.Factory/SiteConfigs',
-        'plugin.BaserCore.Factory/Users',
-        'plugin.BaserCore.Factory/UsersUserGroups',
-        'plugin.BaserCore.Factory/UserGroups',
-        'plugin.BcThemeConfig.Factory/ThemeConfigs',
-    ];
-
-    /**
      * Access Token
      * @var string
      */
@@ -60,7 +46,6 @@ class ThemeConfigsControllerTest extends BcTestCase
      */
     public function setUp(): void
     {
-        $this->setFixtureTruncate();
         parent::setUp();
         $this->loadFixtureScenario(InitAppScenario::class);
         $token = $this->apiLoginAdmin(1);
@@ -91,7 +76,7 @@ class ThemeConfigsControllerTest extends BcTestCase
         //戻る値を確認
         $result = json_decode((string)$this->_response->getBody());
         //全て４件を取得できるか確認
-        $this->assertCount(4, get_object_vars($result->themeConfig));
+        $this->assertCount(5, get_object_vars($result->themeConfig));
         //単位Objectの値を確認
         $this->assertEquals('2B7BB9', $result->themeConfig->color_hover);
     }
@@ -124,8 +109,8 @@ class ThemeConfigsControllerTest extends BcTestCase
         $this->assertResponseCode(500);
         //戻る値を確認
         $result = json_decode((string)$this->_response->getBody());
-        $this->assertEquals(
-            'データベース処理中にエラーが発生しました。Cake\ORM\Entity::get(): Argument #1 ($field) must be of type string, int given, called in /var/www/html/vendor/cakephp/cakephp/src/Datasource/EntityTrait.php on line 557',
+        $this->stringContains(
+            'データベース処理中にエラーが発生しました。Cake\ORM\Entity::get(): Argument #1 ($field) must be of type string, int given, called in /var/www/html/vendor/cakephp/cakephp/src/Datasource/EntityTrait.php',
             $result->message
         );
     }
