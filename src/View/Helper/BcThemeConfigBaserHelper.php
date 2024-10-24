@@ -20,6 +20,7 @@ use BaserCore\Annotation\Checked;
 /**
  * BcThemeConfigBaserHelper
  */
+#[\AllowDynamicProperties]
 class BcThemeConfigBaserHelper extends Helper implements BcPluginBaserHelperInterface
 {
 
@@ -28,7 +29,9 @@ class BcThemeConfigBaserHelper extends Helper implements BcPluginBaserHelperInte
      *
      * @var string[]
      */
-    public $helpers = ['BcThemeConfig.BcThemeConfig'];
+    public array $helpers = [
+        'BcThemeConfig.BcThemeConfig'
+    ];
 
     /**
      * メソッド一覧取得
@@ -36,6 +39,7 @@ class BcThemeConfigBaserHelper extends Helper implements BcPluginBaserHelperInte
      * @return array[]
      * @checked
      * @noTodo
+     * @unitTest
      */
     public function methods(): array
     {
